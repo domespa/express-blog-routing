@@ -5,13 +5,13 @@ const express = require('express')
 const router = express.Router()
 
 // Index 
-router.get("/", (req, res) => {
-    res.send("Lista dei post")
+router.get("/", (req, res) => { // BONUS
+    res.json("Lista dei post")
 })
 
 // Show
-router.get("./:id", (req, res) => {
-    res.send(`Dettaglio del post: ${req.params.id}`)
+router.get("/:id", (req, res) => { // BONUS
+    res.json(`Dettaglio del post: ${req.params.id}`)
 })
 
 // Store
